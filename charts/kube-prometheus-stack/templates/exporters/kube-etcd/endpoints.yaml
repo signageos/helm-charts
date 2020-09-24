@@ -7,7 +7,7 @@ metadata:
     app: {{ template "kube-prometheus-stack.name" . }}-kube-etcd
     k8s-app: etcd-server
 {{ include "kube-prometheus-stack.labels" . | indent 4 }}
-  namespace: kube-system
+  namespace: {{ .Values.kubeEtcd.namespace }}
 subsets:
   - addresses:
       {{- range .Values.kubeEtcd.endpoints }}
