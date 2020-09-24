@@ -15,7 +15,7 @@ spec:
       release: {{ $.Release.Name | quote }}
   namespaceSelector:
     matchNames:
-      - "kube-system"
+      - "{{ .Values.kubeDns.namespace }}"
   endpoints:
   - port: http-metrics-dnsmasq
     {{- if .Values.kubeDns.serviceMonitor.interval }}

@@ -496,6 +496,7 @@ alertmanager:
 grafana:
   enabled: true
   namespaceOverride: ""
+  namespace: kube-system
 
   ## Deploy default dashboards.
   ##
@@ -767,6 +768,7 @@ kubelet:
 ##
 kubeControllerManager:
   enabled: true
+  namespace: kube-system
 
   ## If your kube controller manager is not deployed as a pod, specify IPs it can be found on
   ##
@@ -820,6 +822,7 @@ kubeControllerManager:
 ##
 coreDns:
   enabled: true
+  namespace: kube-system
   service:
     port: 9153
     targetPort: 9153
@@ -851,6 +854,7 @@ coreDns:
 ##
 kubeDns:
   enabled: false
+  namespace: kube-system
   service:
     dnsmasq:
       port: 10054
@@ -900,6 +904,7 @@ kubeDns:
 ##
 kubeEtcd:
   enabled: true
+  namespace: kube-system
 
   ## If your etcd is not deployed as a pod, specify IPs it can be found on
   ##
@@ -960,6 +965,7 @@ kubeEtcd:
 ##
 kubeScheduler:
   enabled: true
+  namespace: kube-system
 
   ## If your kube scheduler is not deployed as a pod, specify IPs it can be found on
   ##
@@ -1013,6 +1019,7 @@ kubeScheduler:
 ##
 kubeProxy:
   enabled: true
+  namespace: kube-system
 
   ## If your kube proxy is not deployed as a pod, specify IPs it can be found on
   ##
